@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .circle {
+    @apply flex justify-center items-center w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-200 text-green-950 font-bold;
+  }
+
+  .circle.active {
+    @apply bg-green-500 dark:bg-green-600;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cards {
+  @apply grid grid-cols-4 gap-3;
+}
+
+.label {
+  @apply my-2 text-lg font-bold;
+}
+
+.form-group {
+  @apply flex flex-col my-4;
+}
+
+.form-group label {
+  @apply mb-2 text-sm font-medium dark:text-white;
+}
+
+.form-group .form-control {
+  @apply w-full h-10 px-4 border rounded-lg dark:bg-transparent dark:text-white border-slate-600;
+}

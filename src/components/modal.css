@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cards {
+  @apply grid grid-cols-4 gap-3;
+}
+
+.label {
+  @apply my-2 text-lg font-bold;
+}
+
+.form-group {
+  @apply flex flex-col my-4;
+}
+
+.form-group label {
+  @apply mb-2 text-sm font-medium dark:text-white;
+}
+
+.form-group .form-control {
+  @apply w-full h-10 px-4 border rounded-lg dark:bg-transparent dark:text-white border-slate-600;
+}
